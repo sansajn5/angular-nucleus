@@ -16,7 +16,7 @@ const routes: Routes = [
 
   {
     path: 'nucleus',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: `${ROUTE_MODULES}/nucleus/nucleus.module#NucleusModule`,
   },
   { path: '**', redirectTo: 'auth', pathMatch: 'full' },

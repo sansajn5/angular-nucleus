@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+<nb-layout>
+    <nb-layout-header fixed>MaxCargo</nb-layout-header>
+  
+    <nb-sidebar>
+      <nb-menu [items]="menuItems" autoCollapse="true">
+      </nb-menu>
+    </nb-sidebar>
+  
+    <nb-layout-column>
+      <router-outlet></router-outlet>
+    </nb-layout-column>
+  </nb-layout>

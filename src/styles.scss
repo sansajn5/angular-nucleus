@@ -2,3 +2,17 @@
 * {
     font-family: 'roboto'; 
 }
+
+.flexWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardPageWrapper {
+    height: 98%;
+}
+
+
+
+// framework component themes (styles tied to theme variables)
+@import '~@nebular/theme/styles/globals';

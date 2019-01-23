@@ -1,0 +1,15 @@
+:host /deep/ {
+    
+    .dashboardWrapper {
+        height: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .dashboardItems {
+        flex: 0 1 auto;
+        align-self: auto;
+    }
+}

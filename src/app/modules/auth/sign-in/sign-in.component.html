@@ -1,3 +1,42 @@
-<p>
-  sign-in works!
-</p>
+<div class="col-md-4 auth-block">
+  <img class="logo" [src]="'assets/images/logo.png'" alt="logo">
+  <h2 class="title">{{'AUTH.FORM.SIGN_IN_TITLE' | translate}}</h2>
+  <form (ngSubmit)="signIn()" (keyup.enter)="authForm.valid && signIn()" [formGroup]="authForm" autocomplete="nope">
+    <div class="form-group">
+      <div class="input-group mail-btn-group">
+        <input placeholder="{{'AUTH.FORM.EMAIL' | translate}}" type="text" 
+               class="form-control" formControlName="email" 
+               [class.form-control-danger]="email.invalid && email.touched" autofocus
+        >
+        <span class="input-group-btn">
+          <button class="btn btn-info btn-responsive" style="opacity: 1" disabled>
+            @maxcargo
+          </button>
+        </span>
+      </div>
+      <small class="form-text error" *ngIf="email.invalid && email.touched && email.errors?.required">
+        {{ 'AUTH.FORM.VALIDATION.EMAIL_REQ' | translate }}
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="input-password" class="sr-only">Password</label>
+      <input name="password" formControlName="password" id="input-password"
+             class="form-control" placeholder="{{'AUTH.FORM.PASSWORD' | translate}}" type="password"
+             [class.form-control-danger]="password.invalid && password.touched"
+             >
+      <small class="form-text error" *ngIf="password.invalid && password.touched && password.errors?.required">
+        
+        {{ 'AUTH.FORM.VALIDATION.PASSWORD_REQ' | translate }}
+      </small>
+      <small
+        class="form-text error"
+        *ngIf="password.invalid && password.touched && (password.errors?.minlength || password.errors?.maxlength)">
+        {{ 'AUTH.FORM.VALIDATION.PASSWORD_LEN' | translate }}
+      </small>
+    </div>
+    <button [disabled]="!authForm.valid" class="btn btn-block btn-hero-info"
+            [class.btn-pulse]="submitted">
+        {{ 'AUTH.FORM.BUTTON.LOGIN' | translate }}
+    </button>
+  </form>
+</div>

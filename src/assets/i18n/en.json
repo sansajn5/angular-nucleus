@@ -6,26 +6,66 @@
         "SUCCESSFULLY_SIGNED_UP": "You've been successfully sign up",
         "WELCOME": "Welcome",
         "LOGOUT": "You are successfully logged out",
-        "ERROR_IN_PROCESS": "Erro while loging",
+        "ERROR_IN_PROCESS": "Error while loging",
         "FORM": {
+          "SIGN_IN_TITLE": "Sign up",
           "EMAIL": "Enter your email",
           "PASSWORD": "Enter your password",
           "FIRST_NAME": "Enter your first name",
           "LAST_NAME": "Enter your last name",
-          "BTN_LOGIN": "Login",
-          "BTN_REGISTER": "Register",
-          "BTN_FORGOT_PASSWORD": "Forgot password?"
+          "BUTTON": {
+            "LOGIN": "Login",
+            "REGISTER": "Register",
+            "FORGOT_PASSWORD": "Forgot password?"
+          },
+          "VALIDATION": {
+              "EMAIL_REQ": "E-mail is required",
+              "PASSWORD_REQ": "Password is required!",
+              "PASSWORD_LEN": "Password length must be between 3 to 10 characters"
+          }
+        }
+    },
+    "MESSAGES": {
+
+    },
+    "MENU": {
+        "PROFILE": "Profile",
+        "PROFILE_CHILDREN": {
+            "INFO": "Profile Information",
+            "CHANGE_PASSWORD": "Change password",
+            "DEACTIVE": "Deactive account"
+        },
+        "CLIENTS": "Clients",
+        "CLIENTS_CHILDREN": {
+            "SHOW": "Show Clients",
+            "ADD": "Add New Client"
+        },
+        "USERS": "Users",
+        "LOGOUT": "Logout"
+    },
+    "CLIENTS": {
+        "NEW": {
+            "FIRST_STEP": {
+                "TITLE": "Location",
+                "COUNTRY": "Select Country",
+                "CITY": "Select city",
+                "ADDRESS": "Select address",
+                "ADD_COUNTY": "Add new country",
+                "ADD_CITY": "Add new city",
+                "ADD_ADDRESS": "Add new address",
+                "EXISTING_COUNTY": "Use existing country",
+                "EXISTING_CITY": "Use existing city",
+                "EXISTING_ADDRESS": "Use existing address"
+            },
+            "SECOND_STEP": {
+                "TITLE": "Information Data"
+            },
+            "THIRD_STEP": {
+                "TITLE": "Finish"
+            }
         }
     },
     "GLOBAL": {
-        "CONGRATULATION": "Congratulation!",
-        "GOOD_BYE": "Goodbye!"
-    },
-    "NUCLEUS": {
-        "STARTER": "Nucleus starter kit",
-        "DASHBOARD": "Go to dashboard",
-        "LOGIN": "Go to sing in",
-        "REGISTER": "Go to sign-up",
-        "SPIN": "Spinner"
+        "CONFIRM": "Confirm"
     }
 }

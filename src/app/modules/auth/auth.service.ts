@@ -14,7 +14,7 @@ const httpOptionsWithJSON = {
 @Injectable()
 export class AuthService {
 
-  private BASE_URL: string = `${environment.endpoint}/api`;
+  private BASE_URL: string = `${environment.endpoint}api`;
 
   constructor(
     private http: HttpClient,

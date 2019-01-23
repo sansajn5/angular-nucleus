@@ -11,9 +11,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SharedModule } from './shared/shared.module';
+import { JwtModule } from '@auth0/angular-jwt';
+import { NbMenuModule } from '@nebular/theme';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
+}
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
 }
 
 @NgModule({
@@ -34,7 +40,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     CoreModule.forRoot(),
     SharedModule.forRoot(),
     ToastrModule.forRoot(),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+      }
+    }),
     AppRoutingModule,
+    NbMenuModule.forRoot(),
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -2,11 +2,13 @@ import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core
 import { AuthService } from '../modules/auth/auth.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { SpinnerService } from './services/spinner.service';
+import { ClientService } from '../modules/nucleus/clients/client.service';
 
 const SERVICES = [
   AuthService,
   LocalStorageService,
   SpinnerService,
+  ClientService,
 ];
 
 @NgModule({
